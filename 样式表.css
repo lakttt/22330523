@@ -1,0 +1,492 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1F7199; /* 更新header背景色 */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between; /* Logo和搜索框分别在左右两端 */
+    align-items: center; /* 垂直居中Logo和搜索框 */
+    position: relative;
+}
+
+.logo {
+    position: absolute; /* Logo绝对定位 */
+    left: 10px; /* Logo距离左边框10px */
+    top: 50%; /* Logo在垂直方向上居中对齐 */
+    transform: translateY(-50%); /* 向上移动50%以居中对齐 */
+}
+
+.logo img {
+    width: 436px;  /* Logo图片宽度 */
+    height: 90px; /* Logo图片高度 */
+    /* 如果Logo图片宽度超出屏幕宽度，可以添加以下属性 */
+    /* max-width: 100%; */
+    /* height: auto; */
+}
+
+.search-box {
+    position: absolute;
+    top: 60px; /* 原来的基础上减去50px */
+    right: 10px;
+    display: flex;
+    align-items: center; /* 使搜索框和按钮水平居中 */
+    z-index: 1001;
+}
+
+.search-footer {
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.search-footer a {
+    text-decoration: none;
+    color: #EBEBEB;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+/* 搜索框样式，宽度自适应 */
+.search-box input[type="search"] {
+    height: 30px; /* 搜索框高度减小 */
+    padding: 0 10px;
+    flex-grow: 1;
+    margin-right: 5px; /* 搜索框与按钮之间的间距 */
+    border-radius: 15px; /* 圆角搜索框 */
+}
+
+/* 搜索按钮样式，位于搜索框右侧 */
+.search-box button {
+    padding: 0 15px; /* 调整按钮内边距 */
+    background-color: #EBEBEB;
+    color: #767879;
+    border: none;
+    border-radius: 15px; /* 圆角按钮，与搜索框匹配 */
+    cursor: pointer;
+    height: 30px; /* 按钮高度与搜索框高度一致 */
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 1432px; /* 设置导航栏宽度为1432px */
+    /* 由于设置了固定宽度，如果需要水平居中，可以使用以下属性 */
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 20px 0; 可以保留或者根据需要调整 */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #1F7199;
+    margin-top: 120px; /* 保持导航栏下移120px */
+    /* 由于nav有固定宽度，这里可以不用设置宽度 */
+}
+
+nav ul li {
+    display: inline-block;
+    /* 将导航项之间的间距设置为60px */
+    margin: 0 60px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #E1DA18;
+    display: block;
+    padding: 10px 15px;
+    font-size: 20px; /* 设置导航栏字体大小为20px */
+}
+
+nav a:hover, nav a:focus {
+    background-color: #E1DA18;
+    color: #1F7199;
+}
+
+.nav-menu li {
+    position: relative; /* 为下拉菜单定位 */
+    list-style: none;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #E1DA18;
+    display: block;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+/* 初始时下拉菜单不显示 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* 移除额外的2px间隔，使下拉菜单紧接在导航项下方 */
+    background-color: #1F7199;
+    text-align: left;
+    white-space: nowrap;
+    margin-top: -1px; /* 如果下拉菜单有边框，可能需要负边距来调整位置 */
+    z-index: 1000; /* 确保下拉菜单在页面其他元素的上方 */
+}
+
+/* 鼠标悬停时显示下拉菜单 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 下拉菜单项样式 */
+.dropdown-menu li {
+    margin: 2px; /* 保持与主导航项相同的间距 */
+    font-size: 16px; /* 设置下拉菜单项的字体大小为16px */
+    color: #E1DA18; /* 下拉菜单项的文字颜色 */
+    text-decoration: none; /* 移除下划线 */
+    display: block; /* 使链接块级显示 */
+    padding: 10px 15px; /* 设置内边距 */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #E1DA18; /* 鼠标悬停时的背景色 */
+    color: #1F7199; /* 鼠标悬停时的文字颜色 */
+}
+
+nav ul li:hover > a {
+    color: #1F7199; /* 鼠标悬停时导航栏选项内的文字颜色 */
+    background-color: #E1DA18; /* 鼠标悬停时保持背景透明，下拉菜单有背景色 */
+}
+
+
+
+/* 图片轮播容器样式 */
+.banner-carousel {
+    position: relative;
+    width: 100%; /* 容器宽度 */
+    overflow: hidden;
+    margin: auto;
+    white-space: nowrap;
+}
+
+.carousel-img {
+    display: inline-block;
+    width: 100%; /* 图片宽度设置为100% */
+    height: 769px; /* 根据需要设置高度 */
+}
+
+/* 按钮样式 */
+.btn-prev,
+.btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.btn-prev {
+    left: 10px;
+}
+
+.btn-next {
+    right: 10px;
+}
+
+/* 隐藏除了当前显示的图片之外的所有图片 */
+.carousel-img:not(:first-child):not(:nth-child(2)) {
+    display: none;
+}
+
+/* 新闻图片容器样式 */
+.news-images {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0; /* 原有的外边距 */
+    width: 100%; /* 占满整个容器宽度 */
+    margin-bottom: 50px; /* 调整为50px的间隔 */
+}
+
+
+/* 图片新闻容器样式 */
+.news-image-container {
+    flex: 1; /* 图片容器占一半空间 */
+    margin: 50px 180px /* 左右各350px的间隔，总共700px */
+    box-sizing: border-box; /* 边框计算在宽度内 */
+    margin-bottom: 50px;
+}
+
+/* 图片样式 */
+.news-image-container img {
+    width: 100%; /* 图片宽度占满容器 */
+    height: auto; /* 高度自适应 */
+    margin-left: 20px; /* 图片左侧边距 */
+    margin-right: 20px; /* 图片右侧边距 */
+}
+
+/* 调整新闻标题样式 */
+#news h2 {
+    margin-bottom: 10px; /* 与图片新闻容器的间距 */
+}
+
+/* 新闻动态区域背景色设置 */
+#news {
+    background-color: rgba(31, 113, 153, 0.45); /* 设置背景色为#1F7199，透明度为45% */
+    height: 1080px; /* 设置高度为1080px */
+    width: 100%; /* 宽度占满容器 */
+    position: relative; /* 为绝对定位的子元素设置参考 */
+}
+
+/* 图片新闻下方的长方形样式 */
+.news-images + div { /* 假设这个div紧跟在图片新闻容器后面 */
+    width: 1456px; /* 设置宽度为1456px */
+    height: 393px; /* 设置高度为393px */
+    background-color: #FFFFFF; /* 设置背景颜色为白色 */
+    margin-top: 180px;
+    margin: auto; /* 水平居中 */
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); /* 设置外阴影，宽度为4px */
+    position: relative; /* 如果需要对内部元素进行定位 */
+    margin-top: 50px;
+    /* 如果长方形需要绝对定位在某个特定位置，可以添加top/left属性 */
+}
+
+.more-news-title {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl; /* 文本垂直显示 */
+    width: 70px; /* 设置宽度，并添加'px'单位 */
+    height: 192px; /* 设置高度，并添加'px'单位 */
+    margin: 0;
+    padding: 0;
+    font-size: 30px; /* 根据#news h2的实际字体大小调整 */
+    color: #000;
+    line-height: 70px; /* 使文本在高度上垂直居中 */
+    text-align: center; /* 使文本在宽度上水平居中 */
+    white-space: nowrap; /* 防止文本换行 */
+    letter-spacing: 10px;
+}
+/* 确保新闻图片容器和下方的长方形在主内容区内水平居中显示 */
+
+/* 新闻文字样式 */
+.news-text {
+    font-size: 24px; /* 文字大小 */
+    color: #1F7199; /* 文字颜色 */
+    line-height: 44px; /* 行高，这里设置为字体大小加上20px的间隔 */
+    margin: 0; /* 重置默认的外边距 */
+    /* 绝对定位用于垂直居中显示 */
+    position: absolute;
+}
+
+/* 为每个新闻文字设置不同的垂直位置 */
+.news-text:first-child {
+    left: 40%;
+    top: 20%; /* 第一行文字的顶部外边距 */
+}
+
+.news-text:nth-child(2) {
+    left:35%;
+    top:35%; /* 第二行文字的位置 */
+}
+
+.news-text:nth-child(3) {
+    left:30%;
+    top: 50%; /* 第三行文字的位置 */
+}
+
+.news-text:nth-child(4) {
+    left: 25%;
+    top: 65%; /* 第四行文字的位置 */
+}
+
+
+/* 鼠标悬停在新闻文字上时的样式 */
+.news-text:hover {
+    color: #E1DA18; /* 鼠标悬停时的文字颜色 */
+    background-color: #1F7199; /* 鼠标悬停时的背景颜色 */
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
+
+.notice-link,
+.academic-link {
+    display: block; /* 将链接显示为块级元素 */
+    color: #000; /* 默认文字颜色 */
+    text-decoration: none; /* 移除下划线 */
+    font-size: 24px; /* 文字大小 */
+    margin-bottom: 100px; /* 链接之间的间距，根据需要调整 */
+    text-align: center; /* 文本居中 */
+    /* 其他样式根据需要添加 */
+
+}
+
+/* 设置通知公告与上方内容的间隔 */
+#notices {
+    
+    margin-top:50px;
+    margin-left: -65%;
+}
+
+/* 正方形样式 */
+.square {
+    width: 743px;       /* 设置宽度 */
+    height: 556px;      /* 设置高度，保持与宽度成正方形比例 */
+    background-color: #FFFFFF; /* 设置背景颜色 */
+    margin-top: 20px;   /* 与通知公告的上间隔 */
+    /* 如果正方形需要水平居中，可以添加以下属性 */
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); /* 设置外阴影，宽度为4px */
+    margin-left: 45px;
+    margin-right: auto;
+    /* 如果正方形需要绝对定位，可以根据需要设置left和top属性 */
+}
+
+/* 通知公告列表样式 */
+.notice-list {
+    list-style-type: none; /* 移除列表项的默认标记 */
+    padding: 0; /* 移除内边距 */
+    margin: 0; /* 移除外边距 */
+    margin-bottom: 100px; /* 设置每行文字的底部外边距为50px */
+}
+
+/* 设置活动交流与上方内容的间隔 */
+#academic-activities {
+    
+    margin-top:-500px;
+    margin-right:-1300px;
+}
+
+/* 正方形样式 */
+.square2 {
+    width: 743px;       /* 设置宽度 */
+    height: 556px;      /* 设置高度，保持与宽度成正方形比例 */
+    background-color: #FFFFFF; /* 设置背景颜色 */
+    margin-top: 20px;   /* 与活动交流的上间隔 */
+    /* 如果正方形需要水平居中，可以添加以下属性 */
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); /* 设置外阴影，宽度为4px */
+    margin-left: auto;
+    margin-right: auto;
+    /* 如果正方形需要绝对定位，可以根据需要设置left和top属性 */
+}
+
+/* 活动交流列表样式 */
+.academic-activities-list {
+    list-style-type: none; /* 移除列表项的默认标记 */
+    padding: 0; /* 移除内边距 */
+    margin: 0; /* 移除外边距 */
+    margin-right: 45px;
+}
+
+/* 鼠标悬停在通知公告和活动交流链接上时的样式 */
+.notice-link:hover,
+.academic-link:hover {
+    color: #E1DA18; /* 鼠标悬停时的文字颜色 */
+    background-color: #1F7199; /* 鼠标悬停时的背景颜色 */
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+    padding: 10px; /* 轻微内边距，以便背景色更明显 */
+    border-radius: 5px; /* 轻微圆角 */
+}
+
+/* 优秀作品展示区域的布局样式 */
+#e-works {
+    display: flex;          /* 使用Flex布局 */
+    justify-content: center; /* 水平居中 */
+    flex-wrap: wrap;         /* 允许换行 */
+    margin: 20px 0;         /* 与上方内容的间隔 */
+}
+
+/* 学生作品容器样式，使用Flexbox水平排列图片和文字 */
+.student-work {
+    display: flex;          /* 使用flex布局 */
+    flex-direction: row;   /* 子元素水平排列 */
+    align-items: center;   /* 垂直居中 */
+    margin: 20px;          /* 外边距，可根据需要调整 */
+}
+
+/* 学生作品图片样式 */
+.student-work img {
+    width: 430px;          /* 设置图片宽度 */
+    height: 350px;         /* 设置图片高度 */
+    margin-right: 20px;    /* 图片与文字的间隔，仅右侧需要 */
+}
+
+/* 作品名称容器样式 */
+
+
+/* 确保图片和文字在容器内水平排列，且有适当的间隔 */
+#e-works .student-work {
+    margin: 20px 20px;    /* 可根据需要调整 */
+}
+
+/* 移除多余的外边距，保持整齐的布局 */
+#e-works h2 {
+    margin-bottom: 20px;  /* 仅底部需要外边距 */
+    color: #1F7199;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 垂直方向上居中所有子元素 */
+}
+
+main, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+footer {
+    background-color:#1F7199;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute; /* 使用绝对定位 */
+    bottom: 0;
+}
+
+/* 底部导航栏在滚动到底部时的样式 */
+footer.show-at-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.img-container {
+    text-align: center; /* 水平居中图片 */
+    width: 100%; /* 容器宽度 */
+    overflow: hidden; /* 隐藏超出部分 */
+}
+
+.s-news {
+    margin-top: auto
+    margin-bottom: auto
+    
+}
+
+.s-news h2{
+    margin-left: 450px;
+}
+
+/* 链接的基础样式 */
+.anews-link {
+    font-size: 24px; /* 设置字体大小为24px */
+    color: #000; /* 默认文字颜色 */
+    text-decoration: none; /* 移除下划线 */
+    display: inline-block; /* 使链接在一行内显示 */
+    margin-right: 20px; /* 链接之间的间隔 */
+    margin-top: 10px; /* 添加10px的上边距 */
+    margin-bottom: 10px; /* 添加10px的下边距 */
+}
+
+/* 鼠标悬停在链接上时的样式 */
+.anews-link:hover {
+    color: #E1DA18; /* 鼠标悬停时的文字颜色 */
+    background-color: #1F7199; /* 鼠标悬停时的背景颜色 */
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}

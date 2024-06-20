@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>杭电人文艺术与数字媒体学院</title>
+        <link rel="stylesheet" href="样式表.css">
+        <script src="效果.js"></script> <!-- 直接在头部引入外部JS文件 -->
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="图片/logo.jpg" alt="学院Logo"> <!-- Logo图片地址 -->
+            </div>
+            <div class="search-box">
+                <!-- 小字链接 -->
+                <div class="search-footer">
+                    <a href="#" style="color: #EBEBEB; font-size: 12px; margin-right: 10px;">我的杭电</a>
+                    <a href="#" style="color: #EBEBEB; font-size: 12px; margin-right: 10px;">学校邮箱</a>
+                    <a href="#" style="color: #EBEBEB; font-size: 12px; margin-right: 10px;">作品上传</a>
+                    <a href="#" style="color: #EBEBEB; font-size: 12px;">English</a>
+                </div>
+                <!-- 搜索框 -->
+                <input type="search" id="search" name="search" placeholder="搜索...">
+                <button type="submit">搜索</button>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <a href="#">学院概况</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">办学理念</a></li>
+                            <li><a href="#">学院简史</a></li>
+                            <li><a href="#">组织结构</a></li>
+                        </ul>
+                    </li>
+                    <!-- 其他菜单项类似上述结构 -->
+                    <li class="dropdown">
+                        <a href="#">师资力量</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">教学资源</a></li>
+                            <li><a href="#">科研导师</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">人才培养</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">本科教育</a></li>
+                            <li><a href="#">研究生培养</a></li>
+                            <li><a href="#">留学交流</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">新闻动态</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">学院新闻</a></li>
+                            <li><a href="#">通知公告</a></li>
+                        </ul>
+                    <li class="dropdown">
+                            <a href="#">学术研究</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">学术论坛</a></li>
+                                <li><a href="#">科研成果</a></li>
+                                <li><a href="#">最新动态</a></li>
+                            </ul>
+                    <li class="dropdown">
+                            <a href="#">校友天地</a>
+                            <ul class="dropdown-menu">
+                             <li><a href="#">学生作品</a></li>
+                             <li><a href="#">优秀校友</a></li>
+                             <li><a href="#">学生活动</a></li>
+                            </ul>
+                    </li>
+                    <!-- ... 其他菜单项 ... -->
+                </ul>
+            </nav>
+
+        </header>
+
+    
+    <main>
+        <div class="banner-carousel">
+            <img src="图片/banner1.jpg" alt="Banner 1" class="carousel-img">
+            <img src="图片/banner2.jpg" alt="Banner 2" class="carousel-img">
+            <img src="图片/banner3.jpg" alt="Banner 3" class="carousel-img">
+            <!-- 左右按钮 -->
+            <button class="btn-prev">&lt;</button>
+            <button class="btn-next">&gt;</button>  
+        </div>
+        <section id="news">
+            <!-- 新闻动态标题 -->
+            <h2 style="font-size: 48px; margin-left: 10px;  display: inline-block; line-height: 70px; text-align: center;">新闻动态</h2>
+            
+            <!-- 图片新闻容器 -->
+            <div class="news-images" style="display: flex; justify-content: center; margin: 10px 0;">
+                <div class="news-image-container">
+                    <img src="图片/图片新闻1.png" alt="图片新闻1" style="width: 602px; height: 338px;">
+                </div>
+                <div class="news-image-container">
+                    <img src="图片/图片新闻2.jpg" alt="图片新闻2" style="width: 602px; height: 338px;">
+                </div>
+              </div>
+            <div class="white-rectangle"> 
+                <div class="white-rectangle">
+                    <h2 class="more-news-title">更多新闻</h2>
+                    <!-- 在白色长方形容器内添加四行文字 -->
+                    <div class="white-rectangle">
+                    <p class="news-text"><!-- 在白色长方形容器内添加四行文字 -->
+                        <div class="news-container">
+                            <a class="news-text" href="链接地址1">我院师生团队成果入选第二届“全国高校设计赋能乡村振兴创新案例</a>
+                            <a class="news-text" href="链接地址2">我院师生团队成果入选第二届“全国高校设计赋能乡村振兴创新案例</a>
+                            <a class="news-text" href="链接地址3">我院师生团队成果入选第二届“全国高校设计赋能乡村振兴创新案例</a>
+                            <a class="news-text" href="链接地址4">我院师生团队成果入选第二届“全国高校设计赋能乡村振兴创新案例</a>
+                        </div>
+            </div>
+            
+        </section>
+
+        <section id="notices">
+            <h2 style="font-size: 48px; margin-left: 10px; display: inline-block; line-height: 70px; text-align: center;">通知公告</h2>
+           
+
+            <div id="square" class="square">
+                <div><a href="#" class="notice-link">2024年杭电人文艺术与数字媒体学院调剂考生复试名单</a>
+                    <a href="#" class="notice-link">2024年杭电人文艺术与数字媒体学院调剂考生复试名单</a>
+                    <a href="#" class="notice-link">2024年杭电人文艺术与数字媒体学院调剂考生复试名单</a>
+                    <a href="#" class="notice-link">2024年杭电人文艺术与数字媒体学院调剂考生复试名单</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="academic-activities">
+            <h2 style="font-size: 48px; margin-left: 10px; display: inline-block; line-height: 70px; text-align: center;">活动交流</h2>
+           
+
+            <div id="square2" class="square2">
+                <div>
+                    <a href="#" class="academic-link">在杭电看见“诗和远方”|“艺舞芳华”交谊舞会成功举办</a>
+                    <a href="#" class="academic-link">在杭电看见“诗和远方”|“艺舞芳华”交谊舞会成功举办</a>
+                    <a href="#" class="academic-link">在杭电看见“诗和远方”|“艺舞芳华”交谊舞会成功举办</a>
+                    <a href="#" class="academic-link">在杭电看见“诗和远方”|“艺舞芳华”交谊舞会成功举办</a>
+                    
+                </div>
+            </div>
+        </section>
+
+       
+
+        <section id="e-works">
+            <h2 style="font-size: 48px; margin-left: 10px; display: inline-block; line-height: 70px; text-align: center;">大放异彩</h2>
+            <!-- 学生作品1 -->
+    <a href="链接地址1" class="student-work">
+        <img src="图片/图片学生.jpg" alt="学生作品1">
+    </a>
+    <!-- 学生作品2 -->
+    <a href="链接地址2" class="student-work">
+        <img src="图片/图片学生作品.jpg" alt="学生作品2">学生作品
+    </a>
+    <!-- 学生作品3 -->
+    <a href="链接地址3" class="student-work">
+        <img src="图片/学生作品3.jpg" alt="学生作品3">
+    </a>
+    <!-- 优秀作品展示区域 -->
+            <!-- 优秀作品展示区域 -->
+        </section id="quick-link" style="font-size: 48px; margin-left: 10px; display: inline-block; line-height: 70px; text-align: center;">
+        <h2 >快速链接</h2>
+        <section>
+            <h2></h2>
+        </section>
+    
+    </main>
+    <footer >
+        <p style="font-size: 16px; color: #B2B2B2;">版权所有 &copy; 首页 学院概况 师资力量 人才培养 新闻动态 学术研究 校友天地</p>
+        <br>
+        <p style="font-size: 16px; color: #B2B2B2;">Copyright 杭州电子科技大学 数字媒体与艺术设计学院版权所有. All rights reserved</p>
+    </footer>
+</body>
+</html>
